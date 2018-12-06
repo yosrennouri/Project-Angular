@@ -29,6 +29,7 @@ import { CleUSBComponent } from './components/stockage/cle-usb/cle-usb.component
 import { DisquesExternesComponent } from './components/stockage/disques-externes/disques-externes.component';
 import { DisquesInternesComponent } from './components/stockage/disques-internes/disques-internes.component';
 import { TabletteTactileComponent } from './components/ordinateur/tablette-tactile/tablette-tactile.component';
+import { SingleProductComponent } from './components/single-product/single-product.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/product-list', pathMatch:'full'},
@@ -43,7 +44,7 @@ const appRoutes: Routes = [
     { path: 'disque_interne', component:DisquesInternesComponent },
     { path: 'carte_graphique', component:CarteGraphiqueComponent },
     {path:'navbar',component:NavbarComponent},
-
+    {path:'single-product/:id', component:SingleProductComponent},
     { path: 'carte_mère', component: CarteMereComponent},
     { path: 'processeur', component: ProcesseurComponent},
     { path: 'ventilateur', component:VentilateurComponent },

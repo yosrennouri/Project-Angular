@@ -36,6 +36,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AProposComponent } from './components/a-propos/a-propos.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LoginComponent } from './components/login/login.component';
+import { SingleProductComponent } from './components/single-product/single-product.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { LoginComponent } from './components/login/login.component';
     ContactComponent,
     AProposComponent,
     NotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    SingleProductComponent
 
     
 
