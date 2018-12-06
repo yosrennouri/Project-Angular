@@ -1,0 +1,339 @@
+<div class="product-deal-area bg-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="title-1">
+          <h2>DEAL OF THE DAY</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="deal-carousel-active owl-carousel arrow-style-1 owl-loaded owl-drag">
+          <!-- single-deal-wrapper -->
+
+          <!-- single-deal-wrapper -->
+
+          <!-- - -->
+          <div class="owl-stage-outer">
+            <div class="owl-stage" style="transform: translate3d(-2340px, 0px, 0px); transition: all 0s ease 0s; width: 7020px;">
+              <div class="owl-item cloned" style="width: 1170px;">
+                <div class="single-deal-wrapper">
+                  <div class="row">
+                    <div class="col-md-6 col-12">
+                      <!-- deal-img -->
+                      <div *ngFor="let product of products" class="product">
+                        <div *ngIf="product.categoryName==1">
+                          <div class="deal-img">
+                            <a [routerLink]="['/single-product/'+product.id]">
+                              <img alt="" src="src/assets/images/product/{{product.id}}.jpg " style="width: 5000px" style="height: 200px">
+                            </a>
+
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                          <!-- deal-info -->
+                          <div class="deal-info">
+
+                            <h4>
+                              <a [routerLink]="['/single-product/'+product.id]"> {{product.name}}</a>
+                            </h4>
+                            <div class="product-rattings">
+                              <span>
+                                <i class="fa fa-star"></i>
+                              </span>
+                              <span>
+                                <i class="fa fa-star"></i>
+                              </span>
+                              <span>
+                                <i class="fa fa-star"></i>
+                              </span>
+                              <span>
+                                <i class="fa fa-star-half-o"></i>
+                              </span>
+                              <span>
+                                <i class="fa fa-star-o"></i>
+                              </span>
+                            </div>
+                            <p>{{product.description}}</p>
+                            <div class="deal-price">
+                              <span>${{product.prix}}</span>
+                              <del>$150.00</del>
+                            </div>
+                            <div class="select-option">
+                              <a href="#">
+                                <i class="fa fa-shopping-bag"></i>Select option</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 1170px;">
+                    <div class="single-deal-wrapper">
+                      <div class="row">
+                          <div class="col-md-6 col-12">
+                              <!-- deal-img -->
+                              <div *ngFor="let product of products" class="product">
+                                <div *ngIf="product.categoryName==1">
+                                  <div class="deal-img">
+                                    <a [routerLink]="['/single-product/'+product.id]">
+                                      <img alt="" src="src/assets/images/product/{{product.id}}.jpg " style="width: 5000px" style="height: 200px">
+                                    </a>
+        
+                                  </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                  <!-- deal-info -->
+                                  <div class="deal-info">
+        
+                                    <h4>
+                                      <a [routerLink]="['/single-product/'+product.id]"> {{product.name}}</a>
+                                    </h4>
+                                    <div class="product-rattings">
+                                      <span>
+                                        <i class="fa fa-star"></i>
+                                      </span>
+                                      <span>
+                                        <i class="fa fa-star"></i>
+                                      </span>
+                                      <span>
+                                        <i class="fa fa-star"></i>
+                                      </span>
+                                      <span>
+                                        <i class="fa fa-star-half-o"></i>
+                                      </span>
+                                      <span>
+                                        <i class="fa fa-star-o"></i>
+                                      </span>
+                                    </div>
+                                    <p>{{product.description}}</p>
+                                    <div class="deal-price">
+                                      <span>${{product.prix}}</span>
+                                      <del>$150.00</del>
+                                    </div>
+                                    <div class="select-option">
+                                      <a href="#">
+                                        <i class="fa fa-shopping-bag"></i>Select option</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                  </div>
+                  <div class="owl-item active" style="width: 1170px;">
+                    <div class="single-deal-wrapper">
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <!-- deal-img -->
+                                <div *ngFor="let product of products" class="product">
+                                  <div *ngIf="product.categoryName==1">
+                                    <div class="deal-img">
+                                      <a [routerLink]="['/single-product/'+product.id]">
+                                        <img alt="" src="src/assets/images/product/{{product.id}}.jpg " style="width: 5000px" style="height: 200px">
+                                      </a>
+          
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6 col-12">
+                                    <!-- deal-info -->
+                                    <div class="deal-info">
+          
+                                      <h4>
+                                        <a [routerLink]="['/single-product/'+product.id]"> {{product.name}}</a>
+                                      </h4>
+                                      <div class="product-rattings">
+                                        <span>
+                                          <i class="fa fa-star"></i>
+                                        </span>
+                                        <span>
+                                          <i class="fa fa-star"></i>
+                                        </span>
+                                        <span>
+                                          <i class="fa fa-star"></i>
+                                        </span>
+                                        <span>
+                                          <i class="fa fa-star-half-o"></i>
+                                        </span>
+                                        <span>
+                                          <i class="fa fa-star-o"></i>
+                                        </span>
+                                      </div>
+                                      <p>{{product.description}}</p>
+                                      <div class="deal-price">
+                                        <span>${{product.prix}}</span>
+                                        <del>$150.00</del>
+                                      </div>
+                                      <div class="select-option">
+                                        <a href="#">
+                                          <i class="fa fa-shopping-bag"></i>Select option</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item" style="width: 1170px;">
+                    <div class="single-deal-wrapper">
+                      <div class="row">
+                          <div class="row">
+                              <div class="col-md-6 col-12">
+                                  <!-- deal-img -->
+                                  <div *ngFor="let product of products" class="product">
+                                    <div *ngIf="product.categoryName==1">
+                                      <div class="deal-img">
+                                        <a [routerLink]="['/single-product/'+product.id]">
+                                          <img alt="" src="src/assets/images/product/{{product.id}}.jpg " style="width: 5000px" style="height: 200px">
+                                        </a>
+            
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                      <!-- deal-info -->
+                                      <div class="deal-info">
+            
+                                        <h4>
+                                          <a [routerLink]="['/single-product/'+product.id]"> {{product.name}}</a>
+                                        </h4>
+                                        <div class="product-rattings">
+                                          <span>
+                                            <i class="fa fa-star"></i>
+                                          </span>
+                                          <span>
+                                            <i class="fa fa-star"></i>
+                                          </span>
+                                          <span>
+                                            <i class="fa fa-star"></i>
+                                          </span>
+                                          <span>
+                                            <i class="fa fa-star-half-o"></i>
+                                          </span>
+                                          <span>
+                                            <i class="fa fa-star-o"></i>
+                                          </span>
+                                        </div>
+                                        <p>{{product.description}}</p>
+                                        <div class="deal-price">
+                                          <span>${{product.prix}}</span>
+                                          <del>$150.00</del>
+                                        </div>
+                                        <div class="select-option">
+                                          <a href="#">
+                                            <i class="fa fa-shopping-bag"></i>Select option</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                          <!-- deal-info -->
+                          <div class="deal-info">
+
+                              <h4>
+                                <a [routerLink]="['/single-product/'+product.id]"> {{product.name}}</a>
+                              </h4>
+                              <div class="product-rattings">
+                                <span>
+                                  <i class="fa fa-star"></i>
+                                </span>
+                                <span>
+                                  <i class="fa fa-star"></i>
+                                </span>
+                                <span>
+                                  <i class="fa fa-star"></i>
+                                </span>
+                                <span>
+                                  <i class="fa fa-star-half-o"></i>
+                                </span>
+                                <span>
+                                  <i class="fa fa-star-o"></i>
+                                </span>
+                              </div>
+                              <p>{{product.description}}</p>
+                              <div class="deal-price">
+                                <span>${{product.prix}}</span>
+                                <del>$150.00</del>
+                              </div>
+                              <div class="select-option">
+                                <a href="#">
+                                  <i class="fa fa-shopping-bag"></i>Select option</a>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 1170px;">
+                    <div class="single-deal-wrapper">
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <!-- deal-img -->
+                                <div *ngFor="let product of products" class="product">
+                                  <div *ngIf="product.categoryName==1">
+                                    <div class="deal-img">
+                                      <a [routerLink]="['/single-product/'+product.id]">
+                                        <img alt="" src="src/assets/images/product/{{product.id}}.jpg " style="width: 5000px" style="height: 200px">
+                                      </a>
+          
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6 col-12">
+                                    <!-- deal-info -->
+                                    <div class="deal-info">
+          
+                                      <h4>
+                                        <a [routerLink]="['/single-product/'+product.id]"> {{product.name}}</a>
+                                      </h4>
+                                      <div class="product-rattings">
+                                        <span>
+                                          <i class="fa fa-star"></i>
+                                        </span>
+                                        <span>
+                                          <i class="fa fa-star"></i>
+                                        </span>
+                                        <span>
+                                          <i class="fa fa-star"></i>
+                                        </span>
+                                        <span>
+                                          <i class="fa fa-star-half-o"></i>
+                                        </span>
+                                        <span>
+                                          <i class="fa fa-star-o"></i>
+                                        </span>
+                                      </div>
+                                      <p>{{product.description}}</p>
+                                      <div class="deal-price">
+                                        <span>${{product.prix}}</span>
+                                        <del>$150.00</del>
+                                      </div>
+                                      <div class="select-option">
+                                        <a href="#">
+                                          <i class="fa fa-shopping-bag"></i>Select option</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 1170px;">
+                    <div class="single-deal-wrapper">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="owl-dots disabled"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

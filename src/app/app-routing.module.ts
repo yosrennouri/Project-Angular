@@ -1,3 +1,4 @@
+import { PromotionsComponent } from './components/promotions/promotions.component';
 
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { LoginComponent } from './components/login/login.component';
@@ -32,6 +33,7 @@ import { DisquesExternesComponent } from './components/stockage/disques-externes
 import { DisquesInternesComponent } from './components/stockage/disques-internes/disques-internes.component';
 import { TabletteTactileComponent } from './components/ordinateur/tablette-tactile/tablette-tactile.component';
 import { SingleProductComponent } from './components/single-product/single-product.component';
+import { TermesComponent } from './components/termes/termes.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/Home', pathMatch:'full'},
@@ -49,7 +51,7 @@ const appRoutes: Routes = [
     {path:'single-product/:id', component:SingleProductComponent},
     { path: 'carte_mère', component: CarteMereComponent},
     { path: 'processeur', component: ProcesseurComponent},
-   
+    { path: 'Termes_et_conditions', component: TermesComponent},
     { path: 'ventilateur', component:VentilateurComponent },
     { path: 'lampe', component:LampeComponent },
     { path: 'sac_pc', component:SacPCComponent},
@@ -64,7 +66,9 @@ const appRoutes: Routes = [
     { path: 'contact', component:ContactComponent },
     { path: 'Propos', component:AProposComponent }, 
     { path: 'not-found', component:NotFoundComponent},
+    { path: 'Promotion', component:PromotionsComponent},
     { path:'login', component:LoginComponent}
+
     
    ]
 

@@ -39,6 +39,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { SingleProductComponent } from './components/single-product/single-product.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { TermesComponent } from './components/termes/termes.component';
+import { PromotionsComponent } from './components/promotions/promotions.component';
 
 
 
@@ -77,7 +79,9 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
     NotFoundComponent,
     LoginComponent,
     SingleProductComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    TermesComponent,
+    PromotionsComponent
     
   
 
