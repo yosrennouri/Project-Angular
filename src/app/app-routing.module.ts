@@ -1,3 +1,5 @@
+
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -32,7 +34,7 @@ import { TabletteTactileComponent } from './components/ordinateur/tablette-tacti
 import { SingleProductComponent } from './components/single-product/single-product.component';
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: '/product-list', pathMatch:'full'},
+    { path: '', redirectTo: '/Home', pathMatch:'full'},
     { path: 'imprimante', component:ImprimanteComponent },
     { path: 'photocopieur', component:PhotocopieurComponent },
     { path: 'scanner', component:ScannerComponent },
@@ -47,6 +49,7 @@ const appRoutes: Routes = [
     {path:'single-product/:id', component:SingleProductComponent},
     { path: 'carte_mère', component: CarteMereComponent},
     { path: 'processeur', component: ProcesseurComponent},
+   
     { path: 'ventilateur', component:VentilateurComponent },
     { path: 'lampe', component:LampeComponent },
     { path: 'sac_pc', component:SacPCComponent},
@@ -57,11 +60,12 @@ const appRoutes: Routes = [
     { path: 'souris', component:SourisComponent },
     { path: 'web_cam', component:WebCamComponent },
     { path: 'tablette_tactile', component:TabletteTactileComponent },
-    { path: 'product_list', component:ProductListComponent },
+    { path: 'Home', component:ProductListComponent },
     { path: 'contact', component:ContactComponent },
     { path: 'Propos', component:AProposComponent }, 
     { path: 'not-found', component:NotFoundComponent},
     { path:'login', component:LoginComponent}
+    
    ]
 
 @NgModule({

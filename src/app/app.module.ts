@@ -1,9 +1,10 @@
+import { AddCartService } from 'src/app/Services/add-cart.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import 'rxjs';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -37,6 +38,9 @@ import { AProposComponent } from './components/a-propos/a-propos.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { SingleProductComponent } from './components/single-product/single-product.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+
+
 
 @NgModule({
   declarations: [
@@ -72,7 +76,10 @@ import { SingleProductComponent } from './components/single-product/single-produ
     AProposComponent,
     NotFoundComponent,
     LoginComponent,
-    SingleProductComponent
+    SingleProductComponent,
+    ShoppingCartComponent
+    
+  
 
     
 
@@ -83,7 +90,7 @@ import { SingleProductComponent } from './components/single-product/single-produ
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AddCartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
