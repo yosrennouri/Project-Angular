@@ -23,6 +23,7 @@
               <!-- product-details-info -->
               <div class="product-details-info bg-white-4 mb-40">
                 <h4>{{product?.name}}</h4>
+
                 <div class="product-rattings">
                   <span>
                     <i class="fa fa-star"></i>
@@ -41,12 +42,15 @@
                   </span>
                 </div>
                 <div class="product-price">
+                  
                     {{product?.price}}
                 </div>
                 <p>{{product?.description}}</p>
-                <p class="in-stock">
-                  <i class="fa fa-check-circle"></i> {{product?.disponible}}</p>
-                <!-- product-quantity -->
+                <p class="in-stock" *ngIf="product.disponible">
+                  <i class="fa fa-check-circle"></i> Disponible</p>
+                  <p class="in-stock" *ngIf="!product.disponible">
+                      <i class="fa fa-check-circle"></i> non Disponible</p>
+                  <!-- product-quantity -->
                 <div class="product-quantity clearfix">
                   <label class="pull-left">Qty : </label>
                   <div class="cart-plus-minus pull-left">
