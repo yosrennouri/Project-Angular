@@ -1,3 +1,4 @@
+import { ProductsService } from './../../../Services/produts.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisquesExternesComponent implements OnInit {
 
-  constructor() { }
+  public products: any;
+  laptops = [ ];
+
+  constructor(private Product: ProductsService) 
+  { }
 
   ngOnInit() {
+  this.Product.getProduct().subscribe(data => this.products  = data
+  )
   }
 
 }

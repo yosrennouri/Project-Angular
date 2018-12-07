@@ -43,6 +43,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { TermesComponent } from './components/termes/termes.component';
 import { PromotionsComponent } from './components/promotions/promotions.component';
 import { StorageService } from './Services/storage.service';
+import { SmartPhoneComponent } from './components/telephone/smart-phone/smart-phone.component';
 
 
 @NgModule({
@@ -82,7 +83,8 @@ import { StorageService } from './Services/storage.service';
     SingleProductComponent,
     ShoppingCartComponent,
     TermesComponent,
-    PromotionsComponent
+    PromotionsComponent,
+    SmartPhoneComponent
   ],
   imports: [
     BrowserModule,

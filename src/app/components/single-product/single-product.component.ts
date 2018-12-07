@@ -4,6 +4,7 @@ import { AddCartService } from './../../Services/add-cart.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '../../../../node_modules/@angular/router';
 import { ProductsService } from '../../Services/produts.service';
+import { Product } from '../../product';
 
 @Component({
   selector: 'app-single-product',
@@ -37,7 +38,7 @@ export class SingleProductComponent implements OnInit {
 
   addProductToCart(){
     this.addCartService.addToCart(this.product);
-    let products : any[] = [];
+    let products : Product[] = [];
      products = this.storageService.read("products");
     if(products)
     {

@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 import { Carts } from './../../models/cartProducts';
 import { ProductListComponent } from './../product-list/product-list.component';
 import { Component, OnInit } from '@angular/core';
@@ -21,7 +22,7 @@ export class ShoppingCartComponent implements OnInit {
 
   ngOnInit() {
     this.Carts = this.storageService.read("products")
-    // na3mel for nboucli >3la carts, ne7seb la somme des prix des produits w n7ottha fi sum
+    this.Carts.forEach(element => { console.log(this.sum);   this.sum += element.prix});
     console.log(this.Carts);
   }
 

@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../../Services/produts.service';
 
 @Component({
-  selector: 'app-tablette-tactile',
-  templateUrl: './tablette-tactile.component.html',
-  styleUrls: ['./tablette-tactile.component.css']
+  selector: 'app-smart-phone',
+  templateUrl: './smart-phone.component.html',
+  styleUrls: ['./smart-phone.component.css']
 })
-export class TabletteTactileComponent implements OnInit {
+export class SmartPhoneComponent implements OnInit {
 
   public products: any;
   laptops = [ ];
