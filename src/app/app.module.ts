@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import 'rxjs';
 
@@ -41,7 +42,7 @@ import { SingleProductComponent } from './components/single-product/single-produ
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { TermesComponent } from './components/termes/termes.component';
 import { PromotionsComponent } from './components/promotions/promotions.component';
-
+import { StorageService } from './Services/storage.service';
 
 
 @NgModule({
@@ -82,19 +83,17 @@ import { PromotionsComponent } from './components/promotions/promotions.componen
     ShoppingCartComponent,
     TermesComponent,
     PromotionsComponent
-    
-  
-
-    
-
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [AddCartService],
+  exports:[
+    FormsModule
+  ],
+  providers: [AddCartService, StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

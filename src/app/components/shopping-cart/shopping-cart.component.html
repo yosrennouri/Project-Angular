@@ -17,35 +17,24 @@
                                 </tr>
                             </thead>
                             <tbody>
-                               
-                                    
-                                    
-
-
-                               <tr>
-                               <div *ngFor="let product of products" class="product">
-                                    
-                                    <div class="col-lg-3 col-md-5 col-12">
+                                <tr class="product" *ngFor="let product of getCartProducts()">
+                                    <td>
                                         <div class="product-thumbnail">
-                                            <img alt="" src="src/assets/images/product/{{product.id}}.jpg " >
+                                            <img alt="" src="src/assets/images/product/{{product.id}}.jpg ">
                                         </div>
-            
+                                    </td>
+                                    <td>
                                         <div class="product-name"> &{{product.name}} </div>
+                                    </td>
+                                    <td>
                                         <div class="product_price">${{product.prix}}</div>
+                                    </td>
+                                    <td>
                                         <div class="product-quantity">
-                                        <input title="Quantity" type="number" size="4" min="0" step="1" value="1"> </div>
-                                        <div class="product-subtotal">
-                                                <span>£80.00</span>
-                                        </div>
-
-                                        <div >
-                                                <a (click)="remove(shoppingCarts)" type="button" class=" product-removal text-black btn-floating " ><i class="fa fa-remove" aria-hidden="true"></i></a>
-                                        </div> 
-                                        
-
-                                        </div>
-                                    </div>
-                               </tr>
+                                            <input [(ngModel)]="quantity" title="Quantity" type="number" size="4" min="0" step="1" value="1"> </div>
+                                    </td>
+                                </tr>
+                           
                             </tbody>
                         </table>
                     </div>
@@ -69,11 +58,13 @@
                                         <tbody>
                                             <tr class="cart-subtotal">
                                                 <th>Subtotal</th>
-                                                <td>£130.00</td>
+                                                <td>{{Carts[0].prix *quantity}}</td>
                                             </tr>
                                             <tr class="cart-total">
                                                 <th>total</th>
-                                                <td><strong>£130.00</strong></td>
+                                                <td>
+                                                    <strong>{{Carts[0].prix *quantity}}</strong>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>

@@ -1,6 +1,10 @@
+import { Carts } from './../../models/cartProducts';
+import { ProductListComponent } from './../product-list/product-list.component';
 import { Component, OnInit } from '@angular/core';
 import { AddCartService } from 'src/app/Services/add-cart.service';
-
+import { Product } from '../../product';
+import { StorageService } from '../../Services/storage.service';
+import { forEach } from '../../../../node_modules/@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -8,53 +12,20 @@ import { AddCartService } from 'src/app/Services/add-cart.service';
   styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent implements OnInit {
-  public shoppingCart = [];
-  public removeProducts: any;
-  public total;
-  public product: any;
-  public shoppingCartLe: string;
-  public shoppingCartlength;
-  public key: string;
-
-  constructor(
-    public addCartService: AddCartService, 
-  ) { }
+  
+  Carts: Product[] = [];
+  quantity : number=1;
+  sum : number = 0;
+  constructor(public addCartService: AddCartService,private storageService : StorageService) {
+  }
 
   ngOnInit() {
-
-    this.shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
-  }
-  
-   remove(removeBook) {
-
-
-
-
-    
-    for (let i = 0; i < this.shoppingCart.length; i++) {
-       if (removeBook === this.shoppingCart[i]) {
-        this.removeProducts  = this.shoppingCart.indexOf(removeBook);
-        this.shoppingCart.splice(this.removeProducts, 1);
-        this.key = 'shoppingCart';
-        localStorage.setItem(this.key, JSON.stringify(this.shoppingCart));
-       }
-    }
-   }
-  
-   getTotal() {
-   this.total = 0;
-    for (let i = 0; i < this.shoppingCart.length; i++) {
-        this.total = this.total +  this.shoppingCart[i].ourPrice;
-    }
-    return this.total;
-  }
-  public Buy(shoppingCart) {
-  
-  }
-  
-  
-  
-
+    this.Carts = this.storageService.read("products")
+    // na3mel for nboucli >3la carts, ne7seb la somme des prix des produits w n7ottha fi sum
+    console.log(this.Carts);
   }
 
-
+  getCartProducts(){
+    return this.Carts;    
+  }
+}

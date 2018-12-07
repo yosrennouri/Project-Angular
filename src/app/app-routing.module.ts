@@ -67,6 +67,7 @@ const appRoutes: Routes = [
     { path: 'Propos', component:AProposComponent }, 
     { path: 'not-found', component:NotFoundComponent},
     { path: 'Promotion', component:PromotionsComponent},
+    {path:'cart',component:ShoppingCartComponent},
     { path:'login', component:LoginComponent}
 
     
