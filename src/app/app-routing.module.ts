@@ -65,10 +65,10 @@ const appRoutes: Routes = [
     { path: 'Home', component:ProductListComponent },
     { path: 'contact', component:ContactComponent },
     { path: 'Propos', component:AProposComponent }, 
-    { path: 'not-found', component:NotFoundComponent},
     { path: 'Promotion', component:PromotionsComponent},
     {path:'cart',component:ShoppingCartComponent},
-    { path:'login', component:LoginComponent}
+    { path:'login', component:LoginComponent},
+    { path: '**', component:NotFoundComponent}
 
     
    ]

@@ -51,10 +51,10 @@
                 <div class="col-lg-12">
                     <div class="product_grid flex-container wrap">
                         <!-- list of products -->
-                        <input class="form-control" #query (keyup)="filter(query.value)" >
-                        <ul *ngIf="query.value">
-                            <li *ngFor="let product of filtredProducts">{{product.name}}</li>
-                        </ul>
+                        <input class="form-control" autocomplete="off" #query (keyup)="filter(query.value)" >
+                       <!-- <ul class="list-group" *ngIf="query.value">
+                            <li class="list-group-item" *ngFor="let product of filtredProducts">{{product.name}}</li>
+                        </ul> -->
                         <div *ngFor="let product of filtredProducts" class="product">
                             <div class="col-lg-3 col-md-5 col-12">
                                 <div class="product_image">
