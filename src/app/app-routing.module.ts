@@ -1,3 +1,4 @@
+import { CheckoutComponent } from './components/checkout/checkout.component';
 import { PromotionsComponent } from './components/promotions/promotions.component';
 
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
@@ -71,6 +72,7 @@ const appRoutes: Routes = [
     {path:'cart',component:ShoppingCartComponent},
     { path:'login', component:LoginComponent},
     {path:'smart-phone', component:SmartPhoneComponent},
+    {path:'checkout',component:CheckoutComponent},
     {path:'telephone-fixe', component:TelephoneFixeComponent},
     { path: '**', component:NotFoundComponent}
 
