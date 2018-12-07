@@ -34,7 +34,9 @@ export class NavbarComponent implements OnInit {
   { path: 'Home', },
   { path: 'contact', },
   { path: 'Propos', },
-  { path: 'not-found'},
+  {path:'smart-phone'},
+  {path:'telephone-fixe'},
+  { path: '**'},
   { path:'login', }]
   filtredProducts
 

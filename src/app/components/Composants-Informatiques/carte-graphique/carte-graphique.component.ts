@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../../../Services/produts.service';
 
 @Component({
   selector: 'app-carte-graphique',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarteGraphiqueComponent implements OnInit {
 
-  constructor() { }
+  public products: any;
+  laptops = [ ];
+
+  constructor(private Product: ProductsService) 
+  { }
 
   ngOnInit() {
+  this.Product.getProduct().subscribe(data => this.products  = data
+  )
   }
 
 }

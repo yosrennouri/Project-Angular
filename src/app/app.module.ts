@@ -44,6 +44,7 @@ import { TermesComponent } from './components/termes/termes.component';
 import { PromotionsComponent } from './components/promotions/promotions.component';
 import { StorageService } from './Services/storage.service';
 import { SmartPhoneComponent } from './components/telephone/smart-phone/smart-phone.component';
+import { TelephoneFixeComponent } from './components/telephone/telephone-fixe/telephone-fixe.component';
 
 
 @NgModule({
@@ -84,7 +85,8 @@ import { SmartPhoneComponent } from './components/telephone/smart-phone/smart-ph
     ShoppingCartComponent,
     TermesComponent,
     PromotionsComponent,
-    SmartPhoneComponent
+    SmartPhoneComponent,
+    TelephoneFixeComponent
   ],
   imports: [
     BrowserModule,

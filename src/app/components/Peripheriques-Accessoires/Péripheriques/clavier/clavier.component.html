@@ -1,3 +1,165 @@
-<p>
-  clavier works!
-</p>
+<div class="area pt-60">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+           
+        <!-- SHOP AREA START -->
+        <div class="shop-area">
+
+          <!-- shop-option -->
+          <div class="shop-option clearfix mb-30">
+
+
+            <!-- shop-tab-menu -->
+            <div class="shop-tab-menu pull-right">
+              <div class="nav">
+                <a class="active" data-toggle="tab" href="#shop-tab-menu-1-1">
+                  <i class="zmdi zmdi-view-module"></i>Grid</a>
+              </div>
+            </div>
+          </div>
+          <!-- shop-tab-content -->
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="shop-tab-menu-1-1">
+              <div class="shop-grid-view">
+
+
+                <div class="row">
+                    
+                   <div class="col-12"> 
+                    <!-- single-product-wrapper -->
+                    <div class="product_grid flex-container wrap">
+                      <div *ngFor="let product of products" class="product">
+                          <div *ngIf="product.categoryDTO.id==10">
+
+
+
+
+                        <div class="product_image">
+                          <a [routerLink]="['/single-product/'+product.id]">
+                            <img alt="" src="src/assets/images/product/{{product.id}}.jpg " style="width: 5000px" style="height: 200px">
+                          </a>
+
+
+                          <div class="product-hover">
+                            <div class="quick-view">
+                              <a href="#" data-toggle="modal" data-target="#product_modal" title="Quick View">
+                                <i class="fa fa-search"></i>Quick View</a>
+                            </div>
+                            <div class="product-action clearfix">
+                              <a href="cart.html" data-toggle="tooltip" data-original-title="Add to cart">
+                                <i class="fa fa-shopping-bag"></i>
+                              </a>
+                              <a href="#" data-toggle="tooltip" data-original-title="Compare">
+                                <i class="fa fa-exchange"></i>
+                              </a>
+                              <a href="wishlist.html" data-toggle="tooltip" data-original-title="Add to Wishlist">
+                                <i class="fa fa-heart-o"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                        <!-- product-info -->
+                        <div class="product_content">
+
+                          <div class="product_title">
+                            <a routerLink="product-sheet">
+                              
+                                {{product.name}}
+                              
+                            </a>
+                          </div>
+
+
+
+
+
+                          <div class="product_price">
+                            ${{product.prix}}
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="shop-tab-menu-1-2">
+                <div class="shop-list-view">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <!-- single-product-wrapper -->
+                      <div class="single-product-wrapper">
+                        <div class="product-img">
+                          <a href="single-product.html">
+                            <img src="images/product/1.jpg" alt="Image of Product">
+                          </a>
+                          <div class="product-hover">
+                            <div class="quick-view">
+                              <a href="#" data-toggle="modal" data-target="#product_modal" title="Quick View">
+                                <i class="fa fa-search"></i>Quick View</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- product-info -->
+                        <div class="product-info">
+                          <h4>
+                            <a href="single-product.html">Aliquam lobortis</a>
+                          </h4>
+                          <div class="product-rattings">
+                            <span>
+                              <i class="fa fa-star"></i>
+                            </span>
+                            <span>
+                              <i class="fa fa-star"></i>
+                            </span>
+                            <span>
+                              <i class="fa fa-star"></i>
+                            </span>
+                            <span>
+                              <i class="fa fa-star-half-o"></i>
+                            </span>
+                            <span>
+                              <i class="fa fa-star-o"></i>
+                            </span>
+                          </div>
+                          <div class="product-price">
+                            <span>£145.00</span>
+                            <del>£150.00</del>
+                          </div>
+                          <div class="product-excerpt">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere metus vitae arcu imperdiet,
+                              id aliquet ante scelerisque. Sed sit amet sem vitae urna fringilla tempus.</p>
+                          </div>
+                          <div class="product-action clearfix">
+                            <a href="single-product.html" data-toggle="tooltip" data-original-title="Add to cart">
+                              <i class="fa fa-shopping-bag"></i>
+                              <span>Read More</span>
+                            </a>
+                            <a href="#" data-toggle="tooltip" data-original-title="Compare">
+                              <i class="fa fa-exchange"></i>
+                            </a>
+                            <a href="wishlist.html" data-toggle="tooltip" data-original-title="Add to Wishlist">
+                              <i class="fa fa-heart-o"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <!-- SHOP AREA END -->
+        </div>
+
+      </div>
+    </div>
+  </div>

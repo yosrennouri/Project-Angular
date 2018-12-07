@@ -34,6 +34,8 @@ import { DisquesInternesComponent } from './components/stockage/disques-internes
 import { TabletteTactileComponent } from './components/ordinateur/tablette-tactile/tablette-tactile.component';
 import { SingleProductComponent } from './components/single-product/single-product.component';
 import { TermesComponent } from './components/termes/termes.component';
+import { SmartPhoneComponent } from './components/telephone/smart-phone/smart-phone.component';
+import { TelephoneFixeComponent } from './components/telephone/telephone-fixe/telephone-fixe.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/Home', pathMatch:'full'},
@@ -68,6 +70,8 @@ const appRoutes: Routes = [
     { path: 'Promotion', component:PromotionsComponent},
     {path:'cart',component:ShoppingCartComponent},
     { path:'login', component:LoginComponent},
+    {path:'smart-phone', component:SmartPhoneComponent},
+    {path:'telephone-fixe', component:TelephoneFixeComponent},
     { path: '**', component:NotFoundComponent}
 
     
