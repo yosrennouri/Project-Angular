@@ -1,74 +1,81 @@
 <!-- banner -->
 <div class="banner-area banner-style-1">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="banner-item banner-1">
-                    <a routerLink="/pc">
-                        <img src="src\assets\images\banner\1.jpg" alt="Image of Banner" style="width:1000px;height:700px;">
-                    </a>
-                    <div class="banner-info">
-
-
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="banner-item banner-1">
+                        <a routerLink="/pc">
+                            <img src="src\assets\images\banner\1.jpg" alt="Image of Banner" style="width:1000px;height:700px;">
+                        </a>
+                        <div class="banner-info">
+    
+    
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="banner-item">
-                    <a routerLink="/casque">
-                        <img src="src\assets\images\banner\2.jpg" alt="Image of Banner" style="width:1000px;height:350px;">
-                    </a>
-                </div>
-                <div class="banner-item">
-                    <a routerLink="/tablette_tactile">
-                        <img src="src\assets\images\banner\3.jpg" alt="Image of Banner" style="width:1000px;height:350px;">
-                    </a>
+                <div class="col-lg-6">
+                    <div class="banner-item">
+                        <a routerLink="/casque">
+                            <img src="src\assets\images\banner\2.jpg" alt="Image of Banner" style="width:1000px;height:350px;">
+                        </a>
+                    </div>
+                    <div class="banner-item">
+                        <a routerLink="/tablette_tactile">
+                            <img src="src\assets\images\banner\3.jpg" alt="Image of Banner" style="width:1000px;height:350px;">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<!-- Product -->
-
-
-<div class="product-area pt-60 ">
-    <div class="container">
-        <!-- product-tab-menu -->
-        <div class="row">
-            <div class="col-lg-12">
-
-                <div class="product-tab-menu">
-                    <div class="nav">
-                        <a class="active" data-toggle="tab" href="#product-link-1-1">Promotions</a>
-
+    
+    <!-- Product -->
+    
+    
+    <div class="product-area pt-60 ">
+        <div class="container">
+            <!-- product-tab-menu -->
+            <div class="row">
+                <div class="col-lg-12">
+    
+                    <div class="product-tab-menu">
+                        <div class="nav">
+                            <a class="active" data-toggle="tab" href="#product-link-1-1">Promotions</a>
+    
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="product_grid flex-container wrap">
-                    <!-- list of products -->
-                    <div *ngFor="let product of products" class="product">
-                        <div class="col-lg-3 col-md-5 col-12">
+    
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="product_grid flex-container wrap">
+                        <!-- list of products -->
+                        <input class="form-control" #query (keyup)="filter(query.value)" >
+                        <ul *ngIf="query.value">
+                            <li *ngFor="let product of filtredProducts">{{product.name}}</li>
+                        </ul>
+                        <div *ngFor="let product of filtredProducts" class="product">
+                            <div class="col-lg-3 col-md-5 col-12">
                                 <div class="product_image">
-                                        <a [routerLink]="['/single-product/'+product.id]">
-                                          <img alt="" src="src/assets/images/product/{{product.id}}.jpg " style="width: 5000px" style="height: 200px">
-                                        </a>
-
-                            <div class="product_content">
-                                <div class="product_title">
-                                    <a [routerLink]="product-sheet">{{product.name}}</a>
+                                    <a [routerLink]="['/single-product/'+product.id]">
+    
+                                        <img alt="" src="src/assets/images/product/{{product.id}}.jpg " style="width: 300px"
+                                            style="height: 200px">
+                                            </a>
                                 </div>
-                                <div class="product_price">${{product.prix}}</div>
+    
+                                <div class="product_content">
+                                    <div class="product_title">
+                                        <a [routerLink]="product-sheet">{{product.name}}</a>
+                                    </div>
+                                    <div class="product_price">${{product.prix}}</div>
+                                </div>
+    
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
